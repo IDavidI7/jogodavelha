@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         for (x in 0..lista.size - 1) {
             lista[x].setOnClickListener {
-                joga(it as Button)
+                if (binding.jogador1.text.isBlank() || binding.jogador2.text.isBlank()){
+                    binding.container.isClickable = false
+                    Toast.makeText(this, "Insira o nome dos jogadores", Toast.LENGTH_SHORT).show()
+                } else{
+                    binding.container.isClickable = true
+                    joga(it as Button)
+                }
             }
         }
 
@@ -71,12 +78,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun ganhador() {
         if (jogada % 2 != 0) {
-            binding.Result.text = binding.jogador1.toString()
+            binding.Result.text = binding.jogador1.text
             for (x in 0..lista.size - 1) {
                 lista[x].isClickable = false
             }
         } else {
-            binding.Result.text = binding.jogador2.toString()
+            binding.Result.text = binding.jogador2.text
             for (x in 0..lista.size - 1) {
                 lista[x].isClickable = false
             }
