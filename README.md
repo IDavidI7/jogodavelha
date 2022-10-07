@@ -5,4 +5,5 @@ O jogo se popularizou na Inglaterra do século 19, quando mulheres se reuniam no
 
 
 
-![zyro-image (6)](https://user-images.githubusercontent.com/102183014/194442071-7560c28d-0a2a-4909-8702-c27e6ed8d066.png)
+
+![zyro-image (7)](https://user-images.githubusercontent.com/102183014/194442148-83287597-8441-4a9d-966a-b6eaf13e9ed7.png)
